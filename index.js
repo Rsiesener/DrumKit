@@ -3,7 +3,7 @@ function handleClick(sound) {
   audio.play()
 }
 
-document.addEventListener('keypress', (e) => {
+document.addEventListener('keydown', (e) => {
   let chosenKey = e.key
   if ((chosenKey === 'w')) {
 		audio = new Audio('./sounds/tom-1.mp3')
