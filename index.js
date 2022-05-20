@@ -1,6 +1,14 @@
 function handleClick(sound) {
   let audio = new Audio('./sounds/' + sound)
   audio.play()
+	document.addEventListener('click', (e) => {
+		console.log(e.target)
+		let button = e.target
+		button.classList.add('pressed')
+		setTimeout(() => {
+			button.classList.remove('pressed')
+		}, 200)
+	})
 }
 
 document.addEventListener('keydown', (e) => {
